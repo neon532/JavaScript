@@ -1,0 +1,43 @@
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  const album = records[id];
+
+  // If value is an empty string, delete the property.
+  if (value === "") {
+    delete album[prop];
+  } else {
+    // If prop is not tracks, set the property to value.
+    if (prop !== "tracks") {
+      album[prop] = value;
+    } else {
+      // If prop is tracks, update the tracks array.
+      if (!album.tracks) {
+        album.tracks = [];
+      }
+      album.tracks.push(value);
+    }
+  }
+
+  return records;
+}

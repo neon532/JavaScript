@@ -1,0 +1,15 @@
+function isNumber(str) {
+  return !isNaN(parseFloat(str)) && isFinite(str);
+}
+
+function convertToInteger(str) {
+
+if (isNumber){
+  return parseInt(str, 2);
+} else {
+  return "Nan";
+}
+
+}
+
+convertToInteger("10011");
