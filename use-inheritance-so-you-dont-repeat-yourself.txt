@@ -1,0 +1,25 @@
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    console.log("nom nom nom");
+  }
+}
+
+class Cat extends Animal {
+  constructor(name) {
+    super(name); // Call the parent class constructor
+  }
+}
+
+class Bear extends Animal {
+  constructor(name) {
+    super(name); // Call the parent class constructor
+  }
+}
+
+const lion = new Cat("Simba");
+const bear = new Bear("Yogi");

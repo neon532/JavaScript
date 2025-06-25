@@ -1,0 +1,26 @@
+// The global variable
+const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+// Function to add a book
+function add(bookList, bookName) {
+  // Use spread operator (...) to create a copy of the array
+  const newBookList = [...bookList];
+  newBookList.push(bookName);
+  return newBookList;
+}
+
+// Function to remove a book
+function remove(bookList, bookName) {
+  // Filter to create a new array without the book
+  return bookList.filter(book => book !== bookName);
+}
+
+// Example usage
+const newBookList = add(bookList.slice(), "A New Book");
+console.log(newBookList);  // Output: ['The Hound of the Baskervilles', 'On The Electrodynamics of Moving Bodies', 'Philosophiæ Naturalis Principia Mathematica', 'Disquisitiones Arithmeticae', 'A New Book']
+
+const filteredBookList = remove(bookList.slice(), "On The Electrodynamics of Moving Bodies");
+console.log(filteredBookList); // Output: ['The Hound of the Baskervilles', 'Philosophiæ Naturalis Principia Mathematica', 'Disquisitiones Arithmeticae']
+
+// Note that the original bookList is not modified
+console.log(bookList); // Output: ['The Hound of the Baskervilles', 'On The Electrodynamics of Moving Bodies', 'Philosophiæ Naturalis Principia Mathematica', 'Disquisitiones Arithmeticae']

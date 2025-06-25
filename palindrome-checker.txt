@@ -1,0 +1,7 @@
+function palindrome(str) {
+  // Remove all non-alphanumeric characters and convert to lowercase
+  const loweredStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+  // Check if the string is the same forward and backward
+  return loweredStr === loweredStr.split('').reverse().join('');
+}

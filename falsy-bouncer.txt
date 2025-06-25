@@ -1,0 +1,5 @@
+function bouncer(arr) {
+ return arr.filter(Boolean); // Concise way using filter() and Boolean casting
+}
+
+bouncer([7, "ate", "", false, 9]);

@@ -1,0 +1,15 @@
+function reverseString(str) {
+  // Split the string into an array of characters
+  const letters = str.split('');
+
+  // Reverse the character array in-place, avoiding unnecessary string creation
+  letters.reverse();
+
+  // Join the reversed characters back into a string
+  const reversedString = letters.join('');
+
+  // Return the reversed string
+  return reversedString;
+}
+
+reverseString("hello");

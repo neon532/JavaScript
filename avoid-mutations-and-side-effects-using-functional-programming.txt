@@ -1,0 +1,10 @@
+// The global variable
+let fixedValue = 4;
+
+function incrementer() {
+  // Increment fixedValue by 1 and return the new value
+  return fixedValue+1;
+}
+
+// Call the function and log the result (optional)
+console.log(incrementer()); // Output: 5

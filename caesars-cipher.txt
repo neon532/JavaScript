@@ -1,0 +1,20 @@
+function rot13(ciphertext) {
+  // Tablica alfabetu
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  // Przetwarzanie tekstu zaszyfrowanego
+  let plaintext = "";
+  for (const letter of ciphertext) {
+    // Znalezienie odpowiadającej litery w alfabecie
+    const index = alphabet.indexOf(letter);
+
+    // Odszyfrowanie litery
+    if (index >= 0) {
+      plaintext += alphabet[(index + 13) % 26];
+    } else {
+      plaintext += letter;
+    }
+  }
+
+  return plaintext.toUpperCase();
+}

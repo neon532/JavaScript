@@ -1,0 +1,15 @@
+
+function findElement(arr, func) {
+  // Iterate through the array
+  for (const element of arr) {
+    // Check if the current element passes the truth test using the provided function
+    if (func(element)) {
+      // If it passes, return the element immediately
+      return element;
+    }
+  }
+  // If no element passes the test, return undefined
+  return undefined;
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);

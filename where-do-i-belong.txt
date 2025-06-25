@@ -1,0 +1,12 @@
+function getIndexToIns(arr, value) {
+  // Clone the array to avoid modifying the original
+  const sortedArr = [...arr].sort((a, b) => a - b);
+
+  // Use findIndex to efficiently locate the insertion index
+  const index = sortedArr.findIndex(
+    (num) => num > value || num === value
+  );
+
+  // If the value is greater than all elements in the array, insert at the end
+  return index >= 0 ? index : sortedArr.length;
+}

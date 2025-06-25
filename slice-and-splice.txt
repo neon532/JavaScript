@@ -1,0 +1,8 @@
+function frankenSplice(arr1, arr2, n) {
+  const copiedArr1 = arr1.slice();
+
+  // Use spread syntax (...) to insert copied elements at index n in arr2
+  return [...arr2.slice(0, n), ...copiedArr1, ...arr2.slice(n)];
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);

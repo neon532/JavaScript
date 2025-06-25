@@ -1,0 +1,10 @@
+function mutation(arr) {
+  const [firstString, secondString] = arr.map(str => str.toLowerCase());
+  const charCount = new Set(secondString); // Use Set to store unique characters
+
+  for (const char of firstString) {
+    charCount.delete(char); // Remove characters found in the first string
+  }
+
+  return charCount.size === 0; // True if all characters removed from Set
+}

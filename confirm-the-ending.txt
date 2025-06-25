@@ -1,0 +1,15 @@
+function confirmEnding(str, target) {
+  
+  const strLength = str.length;
+  const targetLength = target.length;
+
+  // Użyj `slice` do wyodrębnienia końcówki słowa
+  const endingToCheck = str.slice(strLength - targetLength);
+
+  // Porównaj wyodrębnioną końcówkę z podaną
+  return endingToCheck === target;
+}
+  
+  
+
+confirmEnding("Bastian", "n");

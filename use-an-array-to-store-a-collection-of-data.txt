@@ -1,0 +1,2 @@
+let yourArray; 
+yourArray = [1,true,"string",2,"elo"];// Change this line

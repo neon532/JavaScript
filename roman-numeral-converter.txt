@@ -1,0 +1,18 @@
+function convertToRoman(number) {
+  // Tablica wartości rzymskich cyfr
+  const values = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+  // Tablica symboli rzymskich cyfr
+  const symbols = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+
+  // Przetwarzanie liczby
+  let roman = "";
+  for (let i = 0; number > 0; i++) {
+    // Wyszukiwanie największej rzymskiej cyfry mniejszej lub równej bieżącej liczbie
+    while (number >= values[i]) {
+      number -= values[i];
+      roman += symbols[i];
+    }
+  }
+
+  return roman;
+}

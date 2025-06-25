@@ -1,0 +1,17 @@
+let myNestedArray = [
+  
+  ['beep'],
+  [
+    ['deep'], 
+  ],
+  [
+    [
+      ['deeper'],
+    ],
+    [
+      [
+        ['deepest'],
+      ]
+    ]
+  ]
+];
